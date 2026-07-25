@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Express Delivery LLC — Home Renovations & Handyman</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         1. ВЕРХНЄ МЕНЮ (HEADER)
+         ========================================== -->
+    <header class="site-header">
+        <div class="logo">Auto Express <span>Delivery</span></div>
+        <nav>
+            <a href="#services">What We Do</a>
+            <a href="#" id="open-projects-btn">Our Projects</a>
+            <a href="#why-us">Why Choose Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- ==========================================
+         2. ГОЛОВНИЙ ЕКРАН ЗІ СЛАЙДЕРОМ (HERO)
+         ========================================== -->
+    <section class="hero-section">
+        <!-- Фонові слайди (Шляхи до твоїх фото) -->
+        <div class="hero-slides">
+            <div class="hero-slide active" style="background-image: url('images/HERO/slider1.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('images/HERO/slider2.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('images/HERO/slider3.jpg');"></div>
+        </div>
+
+        <!-- Темне затемнення для читабельності тексту -->
+        <div class="hero-overlay"></div>
+
+        <!-- Текст та кнопка поверх фону -->
+        <div class="container hero-content">
+            <span class="badge">Auto Express Delivery LLC</span>
+            <h1>Quality Home Renovations & Handyman Services</h1>
+            <p>Small-scale construction, home remodeling, and handyman services. Fast arrival, hassle-free material
+                delivery, and quality work you can trust.</p>
+
+            <div class="hero-actions">
+                <a href="tel:+10000000000" class="btn btn-primary btn-call">
+                    <span class="btn-title">📞 Call or Text Us</span>
+                    <span class="btn-sub">+1 (000) 000-0000</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         3. ПОСЛУГИ ТА СЛАЙДЕРИ (SERVICES)
+         ========================================== -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>What We Do</h2>
+            <p class="section-desc">We specialize in small and medium-sized residential jobs that require precision,
+                neatness, and attention to detail.</p>
+
+            <!-- БЛОК 1: Ремонт та Оновлення (Remodeling) -->
+            <div class="service-split-block">
+
+                <!-- Ліва колонка: Опис та Міні-слайдер -->
+                <div class="split-sidebar">
+                    <h3>🏡 Kitchen & Bathroom Remodeling</h3>
+                    <p>Full transformations and cosmetic updates for your home. We manage everything from demolition to
+                        final tile work with material delivery included.</p>
+
+                    <div class="mini-slider">
+                        <div class="slides-container">
+                            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=600"
+                                class="slide active" alt="Kitchen">
+                            <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=600"
+                                class="slide" alt="Bathroom">
+                            <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?q=80&w=600"
+                                class="slide" alt="Flooring">
+                        </div>
+                        <button class="view-all-btn open-projects-trigger">📸 View All Projects (50+)</button>
+                    </div>
+                </div>
+
+                <!-- Права колонка: Картки робіт -->
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h4>Bathroom Remodeling</h4>
+                        <p>Complete renovation of small bathrooms, demolition, wall and floor preparation.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h4>Kitchen Remodeling</h4>
+                        <p>Cosmetic updates, surface replacements, and kitchen work area preparation.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h4>Tile Installation</h4>
+                        <p>Updating bathroom tiling or installing a neat kitchen backsplash.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h4>Flooring Installation</h4>
+                        <p>Fast and flawless laminate flooring installation for single rooms, kitchens, or hallways.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h4>Slats & Decorative Railings</h4>
+                        <p>Installing modern decorative wood or metal slats, railings, and room dividers.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h4>Small Decks & Patios</h4>
+                        <p>Building cozy outdoor seating areas for your backyard or house.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h4>Local Concrete Works</h4>
+                        <p>Pouring concrete walkways, small patios, and repairing steps or foundation aprons.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h4>Interior Work</h4>
+                        <p>Cosmetic renovations, drywall repairs, wall leveling, and preparation for final finishing.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- БЛОК 2: Дрібний Майстер (Handyman Services) -->
+            <div class="service-split-block reverse-block">
+
+                <!-- Ліва колонка: Картки Handyman -->
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h4>TV & Wall Mounting</h4>
+                        <p>Hanging TVs, shelves, heavy mirrors, pictures, and curtain rods securely.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h4>Electrical & Lighting</h4>
+                        <p>Replacing or repairing outlets, light switches, and installing new light fixtures.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h4>Plumbing & Furniture</h4>
+                        <p>Minor furniture assembly, faucet replacements, and fixing minor siphon leaks.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h4>General Home Repairs</h4>
+                        <p>Quick fixes for doors, hardware, and any small issues around your house.</p>
+                    </div>
+                </div>
+
+                <!-- Права колонка: Опис та Міні-слайдер Handyman -->
+                <div class="split-sidebar">
+                    <h3>🛠️ Handyman Services</h3>
+                    <p>No time or proper tools? Our professional handyman will quickly take care of all your minor
+                        household chores and repairs with maximum precision.</p>
+
+                    <div class="mini-slider" id="handyman-slider">
+                        <div class="slides-container">
+                            <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=600"
+                                class="slide active" alt="Handyman Mounting">
+                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600"
+                                class="slide" alt="Repairs">
+                        </div>
+                        <button class="view-all-btn open-projects-trigger">📸 View All Projects (50+)</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================
+         4. ПЕРЕВАГИ (WHY CHOOSE US)
+         ========================================== -->
+    <section id="why-us" class="why-section">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">🛠️</div>
+                    <h4>We Welcome Small Jobs</h4>
+                    <p>We gladly help with smaller projects that big construction companies reject due to low volume.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🚚</div>
+                    <h4>In-House Material Delivery</h4>
+                    <p>No need to rent a truck. We will pick up and deliver all necessary materials, from bags of
+                        concrete to tiles or laminate.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🤝</div>
+                    <h4>Personal Accountability</h4>
+                    <p>I personally oversee and execute the work, ensuring neatness, honesty, and a clean job site.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📜</div>
+                    <h4>Fully Official</h4>
+                    <p>We operate transparently and legally through our registered company, Auto Express Delivery LLC.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         5. ПІДВАЛ ТА КОНТАКТИ (FOOTER)
+         ========================================== -->
+    <footer id="contact" class="site-footer">
+        <div class="container">
+            <h2>Contact Us Today</h2>
+            <p>Need to remodel a bathroom, put up a kitchen backsplash, or install laminate in one room? Text or call
+                us, and we will discuss your project!</p>
+
+            <div class="footer-contacts">
+                <a href="tel:+10000000000">📞 Phone: +1 (000) 000-0000</a>
+                <a href="#">💬 Messaging: WhatsApp / iMessage / Telegram</a>
+                <span>📍 Service Area: Brooklyn, NY</span>
+            </div>
+
+            <div class="footer-copy">
+                © 2026 Auto Express Delivery LLC. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         6. POP-UP ГАЛЕРЕЯ (MODAL)
+         ========================================== -->
+    <div id="projects-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Our Recent Projects</h2>
+            <p class="modal-sub">A quick look at some of our completed residential projects.</p>
+
+            <div class="modal-gallery-grid">
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=600"
+                        alt="Kitchen Remodel">
+                    <span>Kitchen Transformation</span>
+                </div>
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=600"
+                        alt="Bathroom Tile">
+                    <span>Bathroom & Tile Work</span>
+                </div>
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?q=80&w=600" alt="Flooring">
+                    <span>Flooring Installation</span>
+                </div>
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=600" alt="Handyman">
+                    <span>Handyman & Mounting</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         7. ІНТЕРАКТИВНІ СКРИПТИ (JAVASCRIPT)
+         ========================================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // 1. Слайдер фону на головному екрані (Hero)
+            function initHeroBgSlider() {
+                const heroSlides = document.querySelectorAll('.hero-slide');
+                if (heroSlides.length <= 1) return;
+
+                let currentHero = 0;
+                setInterval(() => {
+                    heroSlides[currentHero].classList.remove('active');
+                    currentHero = (currentHero + 1) % heroSlides.length;
+                    heroSlides[currentHero].classList.add('active');
+                }, 4000);
+            }
+            initHeroBgSlider();
+
+            // 2. Міні-слайдери в секціях послуг
+            function initMiniSliders() {
+                const sliders = document.querySelectorAll('.mini-slider');
+
+                sliders.forEach(slider => {
+                    const slides = slider.querySelectorAll('.slide');
+                    let current = 0;
+
+                    if (slides.length <= 1) return;
+
+                    setInterval(() => {
+                        slides[current].classList.remove('active');
+                        current = (current + 1) % slides.length;
+                        slides[current].classList.add('active');
+                    }, 3500);
+                });
+            }
+            initMiniSliders();
+
+            // 3. Відкриття та закриття Модального Вікна (Галереї)
+            const modal = document.getElementById("projects-modal");
+            const triggers = document.querySelectorAll(".open-projects-trigger, #open-projects-btn");
+            const closeBtn = document.querySelector(".close-modal");
+
+            if (modal) {
+                triggers.forEach(btn => {
+                    btn.addEventListener("click", (e) => {
+                        e.preventDefault();
+                        modal.style.display = "flex";
+                    });
+                });
+
+                if (closeBtn) {
+                    closeBtn.addEventListener("click", () => {
+                        modal.style.display = "none";
+                    });
+                }
+
+                window.addEventListener("click", (e) => {
+                    if (e.target === modal) {
+                        modal.style.display = "none";
+                    }
+                });
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>
