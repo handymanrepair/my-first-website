@@ -14,10 +14,9 @@
          1. ВЕРХНЄ МЕНЮ (HEADER)
          ========================================== -->
     <header class="site-header">
-        <div class="logo">Auto Express <span>Delivery</span></div>
+        <div class="logo">Handyman& <span>Home Repair</span></div>
         <nav>
             <a href="#services">What We Do</a>
-            <a href="#" id="open-projects-btn">Our Projects</a>
             <a href="#why-us">Why Choose Us</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -27,17 +26,16 @@
          2. ГОЛОВНИЙ ЕКРАН ЗІ СЛАЙДЕРОМ (HERO)
          ========================================== -->
     <section class="hero-section">
-        <!-- Фонові слайди (Шляхи до твоїх фото) -->
+        <!-- Фонові слайди залишені -->
         <div class="hero-slides">
             <div class="hero-slide active" style="background-image: url('HERO/slider1.jpg');"></div>
-            <div class="hero-slide" style="background-image: url('HERO/slider2.jpg');"></div>
-            <div class="hero-slide" style="background-image: url('HERO/slider3.jpg'); background-position: 0% 70%;"></div>
+            <div class="hero-slide" style="background-image: url('HERO/slider2.jpeg');"></div>
+            <div class="hero-slide" style="background-image: url('HERO/slider3.jpg'); background-position: 0% 60%;">
+            </div>
         </div>
 
-        <!-- Темне затемнення для читабельності тексту -->
         <div class="hero-overlay"></div>
 
-        <!-- Текст та кнопка поверх фону -->
         <div class="container hero-content">
             <span class="badge">Auto Express Delivery LLC</span>
             <h1>Quality Home Renovations & Handyman Services</h1>
@@ -54,7 +52,7 @@
     </section>
 
     <!-- ==========================================
-         3. ПОСЛУГИ ТА СЛАЙДЕРИ (SERVICES)
+         3. SERVICES SECTION WITH LIGHTBOX GALLERY
          ========================================== -->
     <section id="services" class="services-section">
         <div class="container">
@@ -62,121 +60,82 @@
             <p class="section-desc">We specialize in small and medium-sized residential jobs that require precision,
                 neatness, and attention to detail.</p>
 
-            <!-- БЛОК 1: Ремонт та Оновлення (Remodeling) -->
-            <div class="service-split-block">
+            <div class="services-grid-main">
 
-                <!-- Ліва колонка: Опис та Міні-слайдер -->
-                <div class="split-sidebar">
-                    <h3>🏡 Kitchen & Bathroom Remodeling</h3>
-                    <p>Full transformations and cosmetic updates for your home. We manage everything from demolition to
-                        final tile work with material delivery included.</p>
-
-                    <div class="mini-slider">
-                        <div class="slides-container">
-                            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=600"
-                                class="slide active" alt="Kitchen">
-                            <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=600"
-                                class="slide" alt="Bathroom">
-                            <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?q=80&w=600"
-                                class="slide" alt="Flooring">
-                        </div>
-                        <button class="view-all-btn open-projects-trigger">📸 View All Projects (50+)</button>
+                <!-- Category 1 -->
+                <div class="service-card-modern" data-category="kitchen">
+                    <div class="card-thumb">
+                        <img src="HERO/slider1.jpg"
+                            alt="Kitchen & Bath">
+                    </div>
+                    <div class="card-body">
+                        <h4>🏡 Kitchen & Bath Renovation</h4>
+                        <p>Complete makeover of kitchens and small bathrooms, demolition, custom tiling, and backsplash
+                            installation.</p>
+                        <span class="see-all-btn">See all photos ➔</span>
                     </div>
                 </div>
 
-                <!-- Права колонка: Картки робіт -->
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h4>Bathroom Remodeling</h4>
-                        <p>Complete renovation of small bathrooms, demolition, wall and floor preparation.</p>
+                <!-- Category 2 -->
+                <div class="service-card-modern" data-category="flooring">
+                    <div class="card-thumb">
+                        <img src="HERO/slider3.jpg"
+                            alt="Flooring">
                     </div>
-
-                    <div class="service-card">
-                        <h4>Kitchen Remodeling</h4>
-                        <p>Cosmetic updates, surface replacements, and kitchen work area preparation.</p>
-                    </div>
-
-                    <div class="service-card">
-                        <h4>Tile Installation</h4>
-                        <p>Updating bathroom tiling or installing a neat kitchen backsplash.</p>
-                    </div>
-
-                    <div class="service-card">
-                        <h4>Flooring Installation</h4>
-                        <p>Fast and flawless laminate flooring installation for single rooms, kitchens, or hallways.</p>
-                    </div>
-
-                    <div class="service-card">
-                        <h4>Slats & Decorative Railings</h4>
-                        <p>Installing modern decorative wood or metal slats, railings, and room dividers.</p>
-                    </div>
-
-                    <div class="service-card">
-                        <h4>Small Decks & Patios</h4>
-                        <p>Building cozy outdoor seating areas for your backyard or house.</p>
-                    </div>
-
-                    <div class="service-card">
-                        <h4>Local Concrete Works</h4>
-                        <p>Pouring concrete walkways, small patios, and repairing steps or foundation aprons.</p>
-                    </div>
-
-                    <div class="service-card">
-                        <h4>Interior Work</h4>
-                        <p>Cosmetic renovations, drywall repairs, wall leveling, and preparation for final finishing.
-                        </p>
+                    <div class="card-body">
+                        <h4>🪵 Interior Finishing & Flooring</h4>
+                        <p>Laminate flooring, drywall repairs, wall leveling, cosmetic updates, and room
+                            transformations.</p>
+                        <span class="see-all-btn">See all photos ➔</span>
                     </div>
                 </div>
 
+                <!-- Category 3 -->
+                <div class="service-card-modern" data-category="decks">
+                    <div class="card-thumb">
+                        <img src="Decks/IMG_4428.jpg"
+                            alt="Decks & Patios">
+                    </div>
+                    <div class="card-body">
+                        <h4>🧱 Decks, Patios & Concrete</h4>
+                        <p>Cozy outdoor seating areas, small patios, walkways, steps, and foundation apron repairs.</p>
+                        <span class="see-all-btn">See all photos ➔</span>
+                    </div>
+                </div>
+
+                <!-- Category 4 -->
+                <div class="service-card-modern" data-category="accent">
+                    <div class="card-thumb">
+                        <img src="Railing/IMG_4621.jpg"
+                            alt="Accent Walls">
+                    </div>
+                    <div class="card-body">
+                        <h4>🎨 Accent Walls & Railings</h4>
+                        <p>Modern decorative wood or metal slats, accent interior walls, custom railings, and room
+                            dividers.</p>
+                        <span class="see-all-btn">See all photos ➔</span>
+                    </div>
+                </div>
+
+               
             </div>
-
-            <!-- БЛОК 2: Дрібний Майстер (Handyman Services) -->
-            <div class="service-split-block reverse-block">
-
-                <!-- Ліва колонка: Картки Handyman -->
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h4>TV & Wall Mounting</h4>
-                        <p>Hanging TVs, shelves, heavy mirrors, pictures, and curtain rods securely.</p>
-                    </div>
-
-                    <div class="service-card">
-                        <h4>Electrical & Lighting</h4>
-                        <p>Replacing or repairing outlets, light switches, and installing new light fixtures.</p>
-                    </div>
-
-                    <div class="service-card">
-                        <h4>Plumbing & Furniture</h4>
-                        <p>Minor furniture assembly, faucet replacements, and fixing minor siphon leaks.</p>
-                    </div>
-
-                    <div class="service-card">
-                        <h4>General Home Repairs</h4>
-                        <p>Quick fixes for doors, hardware, and any small issues around your house.</p>
-                    </div>
-                </div>
-
-                <!-- Права колонка: Опис та Міні-слайдер Handyman -->
-                <div class="split-sidebar">
-                    <h3>🛠️ Handyman Services</h3>
-                    <p>No time or proper tools? Our professional handyman will quickly take care of all your minor
-                        household chores and repairs with maximum precision.</p>
-
-                    <div class="mini-slider" id="handyman-slider">
-                        <div class="slides-container">
-                            <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=600"
-                                class="slide active" alt="Handyman Mounting">
-                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600"
-                                class="slide" alt="Repairs">
-                        </div>
-                        <button class="view-all-btn open-projects-trigger">📸 View All Projects (50+)</button>
-                    </div>
-                </div>
-
-            </div>
-
         </div>
     </section>
+
+    <!-- ==========================================
+         MODAL ALBUM GALLERY
+         ========================================== -->
+    <div id="album-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modal-title">Project Gallery</h3>
+            <div id="modal-gallery" class="modal-gallery-grid">
+                <!-- Динамічні фотографії завантажуватимуться сюди -->
+            </div>
+        </div>
+    </div>
+
+
 
     <!-- ==========================================
          4. ПЕРЕВАГИ (WHY CHOOSE US)
@@ -234,44 +193,14 @@
     </footer>
 
     <!-- ==========================================
-         6. POP-UP ГАЛЕРЕЯ (MODAL)
-         ========================================== -->
-    <div id="projects-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Our Recent Projects</h2>
-            <p class="modal-sub">A quick look at some of our completed residential projects.</p>
-
-            <div class="modal-gallery-grid">
-                <div class="gallery-card">
-                    <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=600"
-                        alt="Kitchen Remodel">
-                    <span>Kitchen Transformation</span>
-                </div>
-                <div class="gallery-card">
-                    <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=600"
-                        alt="Bathroom Tile">
-                    <span>Bathroom & Tile Work</span>
-                </div>
-                <div class="gallery-card">
-                    <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?q=80&w=600" alt="Flooring">
-                    <span>Flooring Installation</span>
-                </div>
-                <div class="gallery-card">
-                    <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=600" alt="Handyman">
-                    <span>Handyman & Mounting</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ==========================================
-         7. ІНТЕРАКТИВНІ СКРИПТИ (JAVASCRIPT)
+         6. СКРИПТ ТІЛЬКИ ДЛЯ HERO SLIDER
          ========================================== -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
-            // 1. Слайдер фону на головному екрані (Hero)
+            // ==========================================
+            // 1. СЛАЙДЕР ФОНУ НА ГОЛОВНОМУ ЕКРАНІ (HERO)
+            // ==========================================
             function initHeroBgSlider() {
                 const heroSlides = document.querySelectorAll('.hero-slide');
                 if (heroSlides.length <= 1) return;
@@ -285,50 +214,90 @@
             }
             initHeroBgSlider();
 
-            // 2. Міні-слайдери в секціях послуг
-            function initMiniSliders() {
-                const sliders = document.querySelectorAll('.mini-slider');
 
-                sliders.forEach(slider => {
-                    const slides = slider.querySelectorAll('.slide');
-                    let current = 0;
+            // ==========================================
+            // 2. МОДАЛЬНА ГАЛЕРЕЯ (ФОТО ДЛЯ КАТЕГОРІЙ)
+            // ==========================================
+            // База фото за категоріями (сюди можна додавати реальні фото)
+            const galleries = {
+                kitchen: [
+                    'Kitchen/IMG_1237.jpg',
+                    'Kitchen/IMG_1148.jpg',
+                    'Kitchen/IMG_2425.jpg',
+                    'Kitchen/IMG_2428.jpg',
+                    'Kitchen/IMG_4594.jpg',
+                    'Kitchen/IMG_4596.jpg',
+                    'Kitchen/IMG_1504.jpg',
+                    'HERO/slider1.jpg'
+                ],
+                flooring: [
+                    'HERO/slider3.jpg',
+                    'Flooring/IMG_4599.jpg',
+                    'Flooring/WALL.jpg',
+                    'Flooring/IMG_4602.jpg',
+                    'Flooring/IMG_4604.jpg'
+                ],
+                decks: [
+                    'Decks/IMG_0326.jpg',
+                    'Decks/IMG_0331.jpg',
+                    'Decks/IMG_4428.jpg',
+                    'Decks/IMG_4429.jpg',
+                    'Decks/IMG_4616.jpg',
+                    'Decks/IMG_4618.jpg',
+                ],
+                accent: [
+                    'Railing/IMG_4621.jpg', 
+                    'Railing/IMG_4623.jpg',
+                    'Railing/IMG_4624.jpg',
+                ],
+                mounting: [
+                    'https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=800'
+                ],
+                electrical: [
+                    'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800'
+                ],
+                plumbing: [
+                    'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=800'
+                ],
+                repairs: [
+                    'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800'
+                ]
+            };
 
-                    if (slides.length <= 1) return;
+            const modal = document.getElementById('album-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalGallery = document.getElementById('modal-gallery');
+            const closeModal = document.querySelector('.close-modal');
 
-                    setInterval(() => {
-                        slides[current].classList.remove('active');
-                        current = (current + 1) % slides.length;
-                        slides[current].classList.add('active');
-                    }, 3500);
-                });
-            }
-            initMiniSliders();
+            // Відкриття альбому при кліку на картку
+            document.querySelectorAll('.service-card-modern').forEach(card => {
+                card.addEventListener('click', () => {
+                    const cat = card.getAttribute('data-category');
+                    const titleElement = card.querySelector('h4');
+                    const title = titleElement ? titleElement.innerText : 'Project Gallery';
+                    const images = galleries[cat] || [];
 
-            // 3. Відкриття та закриття Модального Вікна (Галереї)
-            const modal = document.getElementById("projects-modal");
-            const triggers = document.querySelectorAll(".open-projects-trigger, #open-projects-btn");
-            const closeBtn = document.querySelector(".close-modal");
-
-            if (modal) {
-                triggers.forEach(btn => {
-                    btn.addEventListener("click", (e) => {
-                        e.preventDefault();
-                        modal.style.display = "flex";
-                    });
-                });
-
-                if (closeBtn) {
-                    closeBtn.addEventListener("click", () => {
-                        modal.style.display = "none";
-                    });
-                }
-
-                window.addEventListener("click", (e) => {
-                    if (e.target === modal) {
-                        modal.style.display = "none";
+                    if (modalTitle) modalTitle.innerText = title;
+                    if (modalGallery) {
+                        modalGallery.innerHTML = images.map(src => `<img src="${src}" alt="Work preview">`).join('');
                     }
+
+                    if (modal) modal.style.display = 'flex';
+                });
+            });
+
+            // Закриття альбому (на хрестик або за межами вікна)
+            if (closeModal) {
+                closeModal.addEventListener('click', () => {
+                    if (modal) modal.style.display = 'none';
                 });
             }
+
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
 
         });
     </script>
