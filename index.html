@@ -16,102 +16,6 @@
         window.PhotoSwipeLightbox = PhotoSwipeLightbox;
         window.PhotoSwipe = PhotoSwipe;
     </script>
-
-    <style>
-        /* ==========================================
-           СТИЛІ ДЛЯ ФІКСОВАНОГО МОДАЛЬНОГО ВІКНА ТА ГАЛЕРЕЇ
-           ========================================== */
-        #album-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.85);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 99999;
-            backdrop-filter: blur(5px);
-        }
-
-        .modal-content {
-            background: #1e1e1e;
-            color: #fff;
-            width: 90%;
-            max-width: 1000px;
-            max-height: 85vh;
-            border-radius: 12px;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            position: relative;
-        }
-
-        /* Зафіксована шапка модального вікна */
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 25px;
-            background: #141414;
-            border-bottom: 1px solid #333;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-
-        .modal-header h3 {
-            margin: 0;
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #fff;
-        }
-
-        .close-modal {
-            font-size: 32px;
-            line-height: 1;
-            cursor: pointer;
-            color: #aaa;
-            transition: color 0.2s;
-        }
-
-        .close-modal:hover {
-            color: #fff;
-        }
-
-        /* Область з прокруткою для фотографій */
-        .modal-gallery-grid {
-            padding: 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 15px;
-            overflow-y: auto;
-            flex: 1;
-        }
-
-        .modal-gallery-grid a {
-            display: block;
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            border-radius: 8px;
-            overflow: hidden;
-            background: #2a2a2a;
-        }
-
-        .modal-gallery-grid img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-
-        .modal-gallery-grid img:hover {
-            transform: scale(1.05);
-        }
-    </style>
 </head>
 
 <body>
@@ -127,23 +31,26 @@
             <a href="#contact">Contact</a>
         </nav>
     </header>
-
     <!-- ==========================================
-         2. ГОЛОВНИЙ ЕКРАН (HERO)
-         ========================================== -->
+     2. ГОЛОВНИЙ ЕКРАН (HERO)
+     ========================================== -->
     <section class="hero-section">
         <div class="hero-slides">
-            <!-- Залишено тільки одно фото handy.jpg без слайдера -->
             <div class="hero-slide active" style="background-image: url('HERO/handy.jpg');"></div>
         </div>
 
+        <!-- М'яке затемнення фону без жодних рамок -->
         <div class="hero-overlay"></div>
 
         <div class="container hero-content">
-            <span class="badge">Auto Express Delivery LLC</span>
-            <h1>Quality Home Renovations & Handyman Services</h1>
-            <p>Small-scale construction, home remodeling, and handyman services. Fast arrival, hassle-free material
-                delivery, and quality work you can trust.</p>
+            <span class="badge">🛠️ Professional Home Services</span>
+
+            <h1>Quality Home Renovations<br>& Handyman Services</h1>
+
+            <div class="company-byline">by <span>AUTO EXPRESS DELIVERY LLC</span></div>
+
+            <p class="hero-desc">Small-scale construction, home remodeling, and handyman services. Fast arrival,
+                hassle-free material delivery, and quality work you can trust.</p>
 
             <div class="hero-actions">
                 <a href="tel:+10000000000" class="btn btn-primary btn-call">
@@ -236,37 +143,54 @@
     </div>
 
     <!-- ==========================================
-         4. ПЕРЕВАГИ (WHY CHOOSE US)
-         ========================================== -->
+     6. WHY CHOOSE US (LIGHT & MODERN)
+     ========================================== -->
     <section id="why-us" class="why-section">
         <div class="container">
-            <h2>Why Choose Us?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="icon">🛠️</div>
-                    <h4>We Welcome Small Jobs</h4>
-                    <p>We gladly help with smaller projects that big construction companies reject due to low volume.</p>
+            <div class="why-header">
+                <span class="why-badge">WHY AUTO EXPRESS</span>
+                <h2>Why Choose Us</h2>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-card-top">
+                        <div class="why-icon-box">🛠️</div>
+                        <span class="why-num">01</span>
+                    </div>
+                    <h3>Small Jobs Welcome</h3>
+                    <p>We gladly take on small repairs that big construction companies reject due to low volume.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="icon">🚚</div>
-                    <h4>In-House Material Delivery</h4>
-                    <p>No need to rent a truck. We will pick up and deliver all necessary materials, from bags of
-                        concrete to tiles or laminate.</p>
+
+                <div class="why-card">
+                    <div class="why-card-top">
+                        <div class="why-icon-box">🚚</div>
+                        <span class="why-num">02</span>
+                    </div>
+                    <h3>In-House Delivery</h3>
+                    <p>No truck needed. We pick up and deliver all materials — from concrete to laminate.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="icon">🤝</div>
-                    <h4>Personal Accountability</h4>
-                    <p>I personally oversee and execute the work, ensuring neatness, honesty, and a clean job site.</p>
+
+                <div class="why-card">
+                    <div class="why-card-top">
+                        <div class="why-icon-box">🤝</div>
+                        <span class="why-num">03</span>
+                    </div>
+                    <h3>Personal Accountability</h3>
+                    <p>Direct oversight on-site to guarantee neatness, honest estimates, and quality work.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="icon">📜</div>
-                    <h4>Fully Official</h4>
-                    <p>We operate transparently and legally through our registered company, Auto Express Delivery LLC.</p>
+
+                <div class="why-card">
+                    <div class="why-card-top">
+                        <div class="why-icon-box">📜</div>
+                        <span class="why-num">04</span>
+                    </div>
+                    <h3>Fully Official</h3>
+                    <p>We operate transparently and legally through Auto Express Delivery LLC.</p>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- ==========================================
          5. ПІДВАЛ ТА КОНТАКТИ (FOOTER)
          ========================================== -->
@@ -278,8 +202,7 @@
 
             <div class="footer-contacts">
                 <a href="tel:+10000000000">📞 Phone: +1 (000) 000-0000</a>
-                <a href="#">💬 Messaging: WhatsApp / iMessage / Telegram</a>
-                <span>📍 Service Area: Brooklyn, NY</span>
+                <span>📍 Service Area: New York, New Jersey, Pennsylvania</span>
             </div>
 
             <div class="footer-copy">
@@ -294,9 +217,6 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
-            // ==========================================
-            // МОДАЛЬНА ГАЛЕРЕЯ ТА LIGHTBOX (PHOTOSWIPE)
-            // ==========================================
             const galleries = {
                 kitchen: [
                     'Kitchen/IMG_1237.jpg',
@@ -324,21 +244,9 @@
                     'Decks/IMG_4618.jpg',
                 ],
                 accent: [
-                    'Railing/IMG_4621.jpg', 
+                    'Railing/IMG_4621.jpg',
                     'Railing/IMG_4623.jpg',
                     'Railing/IMG_4624.jpg',
-                ],
-                mounting: [
-                    'https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=800'
-                ],
-                electrical: [
-                    'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800'
-                ],
-                plumbing: [
-                    'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=800'
-                ],
-                repairs: [
-                    'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800'
                 ]
             };
 
@@ -348,6 +256,16 @@
             const closeModal = document.querySelector('.close-modal');
 
             let pswpLightbox = null;
+
+            const openModal = () => {
+                if (modal) modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Фікс скролу під модалкою в iOS
+            };
+
+            const closeModalFunc = () => {
+                if (modal) modal.style.display = 'none';
+                document.body.style.overflow = ''; // Відновлення скролу
+            };
 
             // Відкриття альбому при кліку на картку
             document.querySelectorAll('.service-card-modern').forEach(card => {
@@ -360,27 +278,29 @@
                     if (modalTitle) modalTitle.innerText = title;
 
                     if (modalGallery) {
-                        // Формуємо посилання для PhotoSwipe
+                        // Початково створюємо елементи з дефолтними розмірами
                         modalGallery.innerHTML = images.map(src => `
-                            <a href="${src}" data-pswp-src="${src}" target="_blank">
+                            <a href="${src}" data-pswp-src="${src}" data-pswp-width="1200" data-pswp-height="900" target="_blank">
                                 <img src="${src}" alt="Work preview" loading="lazy">
                             </a>
                         `).join('');
 
-                        // Автовизначення розмірів для ідеального зуму
+                        // Оновлюємо фактичні розміри зображень після завантаження
                         modalGallery.querySelectorAll('a').forEach(anchor => {
                             const img = new Image();
                             img.src = anchor.href;
                             img.onload = () => {
-                                anchor.setAttribute('data-pswp-width', img.naturalWidth || 1200);
-                                anchor.setAttribute('data-pswp-height', img.naturalHeight || 800);
+                                if (img.naturalWidth && img.naturalHeight) {
+                                    anchor.setAttribute('data-pswp-width', img.naturalWidth);
+                                    anchor.setAttribute('data-pswp-height', img.naturalHeight);
+                                }
                             };
                         });
                     }
 
-                    if (modal) modal.style.display = 'flex';
+                    openModal();
 
-                    // Ініціалізація гортання та зуму PhotoSwipe
+                    // Ініціалізація PhotoSwipe
                     if (pswpLightbox) pswpLightbox.destroy();
                     if (window.PhotoSwipeLightbox) {
                         pswpLightbox = new window.PhotoSwipeLightbox({
@@ -395,15 +315,13 @@
 
             // Закриття альбому (на хрестик)
             if (closeModal) {
-                closeModal.addEventListener('click', () => {
-                    if (modal) modal.style.display = 'none';
-                });
+                closeModal.addEventListener('click', closeModalFunc);
             }
 
-            // Закриття альбому при кліку за межами вікна (на темний фон)
+            // Закриття альбому при кліку на темну область
             window.addEventListener('click', (e) => {
                 if (e.target === modal) {
-                    modal.style.display = 'none';
+                    closeModalFunc();
                 }
             });
 
