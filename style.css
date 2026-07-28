@@ -80,8 +80,7 @@ nav a:hover {
    ========================================== */
 .hero-section {
   position: relative;
-  min-height: 85vh;
-  min-height: 85dvh;
+  min-height: 80svh; /* svh фіксує розмір і НЕ скаче при хованні панелі браузера */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,6 +89,7 @@ nav a:hover {
   overflow: hidden;
   color: #ffffff;
 }
+
 
 .hero-slides {
   position: absolute;
