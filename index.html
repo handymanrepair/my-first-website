@@ -6,6 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto Express Delivery LLC — Home Renovations & Handyman</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- PhotoSwipe 5 CSS & JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.css">
+    <script type="module">
+        import PhotoSwipeLightbox from 'https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe-lightbox.esm.js';
+        import PhotoSwipe from 'https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.esm.js';
+
+        window.PhotoSwipeLightbox = PhotoSwipeLightbox;
+        window.PhotoSwipe = PhotoSwipe;
+    </script>
+
+    <style>
+        /* ==========================================
+           СТИЛІ ДЛЯ ФІКСОВАНОГО МОДАЛЬНОГО ВІКНА ТА ГАЛЕРЕЇ
+           ========================================== */
+        #album-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.85);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 99999;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background: #1e1e1e;
+            color: #fff;
+            width: 90%;
+            max-width: 1000px;
+            max-height: 85vh;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            position: relative;
+        }
+
+        /* Зафіксована шапка модального вікна */
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 25px;
+            background: #141414;
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .modal-header h3 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .close-modal {
+            font-size: 32px;
+            line-height: 1;
+            cursor: pointer;
+            color: #aaa;
+            transition: color 0.2s;
+        }
+
+        .close-modal:hover {
+            color: #fff;
+        }
+
+        /* Область з прокруткою для фотографій */
+        .modal-gallery-grid {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .modal-gallery-grid a {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #2a2a2a;
+        }
+
+        .modal-gallery-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .modal-gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 
 <body>
@@ -23,15 +129,12 @@
     </header>
 
     <!-- ==========================================
-         2. ГОЛОВНИЙ ЕКРАН ЗІ СЛАЙДЕРОМ (HERO)
+         2. ГОЛОВНИЙ ЕКРАН (HERO)
          ========================================== -->
     <section class="hero-section">
-        <!-- Фонові слайди залишені -->
         <div class="hero-slides">
-            <div class="hero-slide active" style="background-image: url('HERO/slider1.jpg');"></div>
-            <div class="hero-slide" style="background-image: url('HERO/slider2.jpeg');"></div>
-            <div class="hero-slide" style="background-image: url('HERO/slider3.jpg'); background-position: 0% 60%;">
-            </div>
+            <!-- Залишено тільки одно фото handy.jpg без слайдера -->
+            <div class="hero-slide active" style="background-image: url('HERO/handy.jpg');"></div>
         </div>
 
         <div class="hero-overlay"></div>
@@ -65,8 +168,7 @@
                 <!-- Category 1 -->
                 <div class="service-card-modern" data-category="kitchen">
                     <div class="card-thumb">
-                        <img src="HERO/slider1.jpg"
-                            alt="Kitchen & Bath">
+                        <img src="Kitchen/kmain.jpg" alt="Kitchen & Bath">
                     </div>
                     <div class="card-body">
                         <h4>🏡 Kitchen & Bath Renovation</h4>
@@ -79,11 +181,10 @@
                 <!-- Category 2 -->
                 <div class="service-card-modern" data-category="flooring">
                     <div class="card-thumb">
-                        <img src="HERO/slider3.jpg"
-                            alt="Flooring">
+                        <img src="Flooring/fmain.jpg" alt="Flooring">
                     </div>
                     <div class="card-body">
-                        <h4>🪵 Interior Finishing & Flooring</h4>
+                        <h4>Interior Finishing & Flooring</h4>
                         <p>Laminate flooring, drywall repairs, wall leveling, cosmetic updates, and room
                             transformations.</p>
                         <span class="see-all-btn">See all photos ➔</span>
@@ -93,11 +194,10 @@
                 <!-- Category 3 -->
                 <div class="service-card-modern" data-category="decks">
                     <div class="card-thumb">
-                        <img src="Decks/IMG_4428.jpg"
-                            alt="Decks & Patios">
+                        <img src="Decks/IMG_4428.jpg" alt="Decks & Patios">
                     </div>
                     <div class="card-body">
-                        <h4>🧱 Decks, Patios & Concrete</h4>
+                        <h4>Decks, Patios & Concrete</h4>
                         <p>Cozy outdoor seating areas, small patios, walkways, steps, and foundation apron repairs.</p>
                         <span class="see-all-btn">See all photos ➔</span>
                     </div>
@@ -106,18 +206,16 @@
                 <!-- Category 4 -->
                 <div class="service-card-modern" data-category="accent">
                     <div class="card-thumb">
-                        <img src="Railing/IMG_4621.jpg"
-                            alt="Accent Walls">
+                        <img src="Railing/IMG_4621.jpg" alt="Accent Walls">
                     </div>
                     <div class="card-body">
-                        <h4>🎨 Accent Walls & Railings</h4>
+                        <h4>Accent Walls & Railings</h4>
                         <p>Modern decorative wood or metal slats, accent interior walls, custom railings, and room
                             dividers.</p>
                         <span class="see-all-btn">See all photos ➔</span>
                     </div>
                 </div>
 
-               
             </div>
         </div>
     </section>
@@ -127,15 +225,15 @@
          ========================================== -->
     <div id="album-modal" class="modal">
         <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h3 id="modal-title">Project Gallery</h3>
+            <div class="modal-header">
+                <h3 id="modal-title">Project Gallery</h3>
+                <span class="close-modal">&times;</span>
+            </div>
             <div id="modal-gallery" class="modal-gallery-grid">
                 <!-- Динамічні фотографії завантажуватимуться сюди -->
             </div>
         </div>
     </div>
-
-
 
     <!-- ==========================================
          4. ПЕРЕВАГИ (WHY CHOOSE US)
@@ -147,8 +245,7 @@
                 <div class="feature-card">
                     <div class="icon">🛠️</div>
                     <h4>We Welcome Small Jobs</h4>
-                    <p>We gladly help with smaller projects that big construction companies reject due to low volume.
-                    </p>
+                    <p>We gladly help with smaller projects that big construction companies reject due to low volume.</p>
                 </div>
                 <div class="feature-card">
                     <div class="icon">🚚</div>
@@ -164,8 +261,7 @@
                 <div class="feature-card">
                     <div class="icon">📜</div>
                     <h4>Fully Official</h4>
-                    <p>We operate transparently and legally through our registered company, Auto Express Delivery LLC.
-                    </p>
+                    <p>We operate transparently and legally through our registered company, Auto Express Delivery LLC.</p>
                 </div>
             </div>
         </div>
@@ -193,32 +289,14 @@
     </footer>
 
     <!-- ==========================================
-         6. СКРИПТ ТІЛЬКИ ДЛЯ HERO SLIDER
+         6. СКРИПТИ
          ========================================== -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
             // ==========================================
-            // 1. СЛАЙДЕР ФОНУ НА ГОЛОВНОМУ ЕКРАНІ (HERO)
+            // МОДАЛЬНА ГАЛЕРЕЯ ТА LIGHTBOX (PHOTOSWIPE)
             // ==========================================
-            function initHeroBgSlider() {
-                const heroSlides = document.querySelectorAll('.hero-slide');
-                if (heroSlides.length <= 1) return;
-
-                let currentHero = 0;
-                setInterval(() => {
-                    heroSlides[currentHero].classList.remove('active');
-                    currentHero = (currentHero + 1) % heroSlides.length;
-                    heroSlides[currentHero].classList.add('active');
-                }, 4000);
-            }
-            initHeroBgSlider();
-
-
-            // ==========================================
-            // 2. МОДАЛЬНА ГАЛЕРЕЯ (ФОТО ДЛЯ КАТЕГОРІЙ)
-            // ==========================================
-            // База фото за категоріями (сюди можна додавати реальні фото)
             const galleries = {
                 kitchen: [
                     'Kitchen/IMG_1237.jpg',
@@ -228,10 +306,10 @@
                     'Kitchen/IMG_4594.jpg',
                     'Kitchen/IMG_4596.jpg',
                     'Kitchen/IMG_1504.jpg',
-                    'HERO/slider1.jpg'
+                    'Kitchen/kmain.jpg'
                 ],
                 flooring: [
-                    'HERO/slider3.jpg',
+                    'Flooring/fmain.jpg',
                     'Flooring/IMG_4599.jpg',
                     'Flooring/WALL.jpg',
                     'Flooring/IMG_4602.jpg',
@@ -269,6 +347,8 @@
             const modalGallery = document.getElementById('modal-gallery');
             const closeModal = document.querySelector('.close-modal');
 
+            let pswpLightbox = null;
+
             // Відкриття альбому при кліку на картку
             document.querySelectorAll('.service-card-modern').forEach(card => {
                 card.addEventListener('click', () => {
@@ -278,21 +358,49 @@
                     const images = galleries[cat] || [];
 
                     if (modalTitle) modalTitle.innerText = title;
+
                     if (modalGallery) {
-                        modalGallery.innerHTML = images.map(src => `<img src="${src}" alt="Work preview">`).join('');
+                        // Формуємо посилання для PhotoSwipe
+                        modalGallery.innerHTML = images.map(src => `
+                            <a href="${src}" data-pswp-src="${src}" target="_blank">
+                                <img src="${src}" alt="Work preview" loading="lazy">
+                            </a>
+                        `).join('');
+
+                        // Автовизначення розмірів для ідеального зуму
+                        modalGallery.querySelectorAll('a').forEach(anchor => {
+                            const img = new Image();
+                            img.src = anchor.href;
+                            img.onload = () => {
+                                anchor.setAttribute('data-pswp-width', img.naturalWidth || 1200);
+                                anchor.setAttribute('data-pswp-height', img.naturalHeight || 800);
+                            };
+                        });
                     }
 
                     if (modal) modal.style.display = 'flex';
+
+                    // Ініціалізація гортання та зуму PhotoSwipe
+                    if (pswpLightbox) pswpLightbox.destroy();
+                    if (window.PhotoSwipeLightbox) {
+                        pswpLightbox = new window.PhotoSwipeLightbox({
+                            gallery: '#modal-gallery',
+                            children: 'a',
+                            pswpModule: window.PhotoSwipe
+                        });
+                        pswpLightbox.init();
+                    }
                 });
             });
 
-            // Закриття альбому (на хрестик або за межами вікна)
+            // Закриття альбому (на хрестик)
             if (closeModal) {
                 closeModal.addEventListener('click', () => {
                     if (modal) modal.style.display = 'none';
                 });
             }
 
+            // Закриття альбому при кліку за межами вікна (на темний фон)
             window.addEventListener('click', (e) => {
                 if (e.target === modal) {
                     modal.style.display = 'none';
