@@ -611,26 +611,44 @@ nav a:hover {
 /* Мобільні пристрої (Mobile & Tablet Portrait) */
 @media (max-width: 768px) {
   
-  /* Header */
+  /* Header: Логотип зліва, кнопки праворуч у 2 рядки */
   .site-header {
-    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 14px;
+    min-height: 70px;
   }
 
   .logo {
-    font-size: 14px;
+    font-size: 18px !important;
+    max-width: 150px;
+    white-space: normal;
+    line-height: 1.2;
   }
 
   nav {
-    gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 4px 10px;
+    max-width: 199px; /* Зменшили з 250px до 215px, щоб край nav збігався з "What We Do" */
   }
 
   nav a {
-    font-size: 12px;
+    font-size: 14px !important;
+    text-decoration: none;
+    white-space: nowrap;
   }
 
+  /* 3-тя кнопка (Contact) повертається на лівий край блоку nav (прямо під What We Do) */
+  nav a:nth-child(3) {
+    width: 100%;
+    text-align: left;
+  }
   /* Hero */
   .hero-section {
-    min-height: 80svh;
+    min-height: 85svh;
     padding: 50px 16px;
   }
 
@@ -702,23 +720,47 @@ nav a:hover {
     font-size: 28px;
   }
 
-  /* Footer */
+  /* Компактний Footer */
+  footer, .site-footer {
+    padding: 24px 16px 16px !important; /* Зменшені внутрішні відступи футера */
+  }
+
+  .site-footer h2,
+  .footer h2 {
+    font-size: 22px !important; /* Зменшено заголовок "Contact Us Today" */
+    margin-bottom: 8px !important;
+  }
+
+  .site-footer p,
+  .footer p {
+    font-size: 13px !important; /* Зменшено підзаголовок/опис */
+    line-height: 1.35;
+    margin-bottom: 16px !important;
+  }
+
   .footer-contacts {
     flex-direction: column;
-    gap: 12px;
+    align-items: center;
+    gap: 8px !important; /* Зменшено відстань між кнопками з 12px до 8px */
   }
 
   .footer-contacts a,
   .footer-contacts span {
     width: 100%;
-    max-width: 320px;
+    max-width: 290px;
+    padding: 8px 12px !important; /* Зменшено висоту кнопок (padding) */
+    font-size: 14px !important; /* Трохи менший шрифт у кнопках */
   }
 }
-
 /* Маленькі смартфони (Small Mobile <= 480px) */
 @media (max-width: 480px) {
   .logo {
-    font-size: 13px;
+    font-size: 12px;
+    max-width: 130px;
+  }
+
+  nav a {
+    font-size: 11px;
   }
 
   .why-grid {
