@@ -2,10 +2,24 @@
 <html lang="en">
 
 <head>
+    <!-- 1. Кодування та адаптивність — ЗАВЖДИ НАЙПЕРШИМИ -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Auto Express Delivery LLC — Home Renovations & Handyman</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Open Graph (для прев'ю в iMessage, WhatsApp, Telegram) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Handyman & Home Repair | Auto Express Delivery LLC">
+    <meta property="og:description"
+        content="Small-scale construction, home remodeling, and handyman services. Quality work you can trust.">
+    <!-- Для og:image ОБОВ'ЯЗКОВО потрібне повне посилання з https:// (завтра підставите реальний домен) -->
+    <meta property="og:image" content="https://romanstriker-ux.github.io/my-first-website/photo/hero/hero.webp">
+    <meta property="og:url" content="https://romanstriker-ux.github.io/my-first-website/">
 
     <!-- PhotoSwipe 5 CSS & JS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.css">
@@ -36,7 +50,7 @@
      ========================================== -->
     <section class="hero-section">
         <div class="hero-slides">
-            <div class="hero-slide active" style="background-image: url('HERO/handy.jpg');"></div>
+            <div class="hero-slide active" style="background-image: url('photo/hero/hero.webp');"></div>
         </div>
 
         <!-- М'яке затемнення фону без жодних рамок -->
@@ -75,7 +89,7 @@
                 <!-- Category 1 -->
                 <div class="service-card-modern" data-category="kitchen">
                     <div class="card-thumb">
-                        <img src="Kitchen/kmain.jpg" alt="Kitchen & Bath">
+                        <img src="photo/kitchen/kmain.webp" alt="Kitchen & Bath">
                     </div>
                     <div class="card-body">
                         <h4>🏡 Kitchen & Bath Renovation</h4>
@@ -88,7 +102,7 @@
                 <!-- Category 2 -->
                 <div class="service-card-modern" data-category="flooring">
                     <div class="card-thumb">
-                        <img src="Flooring/fmain.jpg" alt="Flooring">
+                        <img src="photo/flooring/fmain.webp" alt="Flooring">
                     </div>
                     <div class="card-body">
                         <h4>Interior Finishing & Flooring</h4>
@@ -101,7 +115,7 @@
                 <!-- Category 3 -->
                 <div class="service-card-modern" data-category="decks">
                     <div class="card-thumb">
-                        <img src="Decks/IMG_4428.jpg" alt="Decks & Patios">
+                        <img src="photo/decks/dmain.webp" alt="Decks & Patios">
                     </div>
                     <div class="card-body">
                         <h4>Decks, Patios & Concrete</h4>
@@ -113,7 +127,7 @@
                 <!-- Category 4 -->
                 <div class="service-card-modern" data-category="accent">
                     <div class="card-thumb">
-                        <img src="Railing/IMG_4621.jpg" alt="Accent Walls">
+                        <img src="photo/railing/rmain.webp" alt="Accent Walls">
                     </div>
                     <div class="card-body">
                         <h4>Accent Walls & Railings</h4>
@@ -201,7 +215,10 @@
                 us, and we will discuss your project!</p>
 
             <div class="footer-contacts">
-                <a href="tel:+10000000000">📞 Phone: +1 (000) 000-0000</a>
+                <a href="tel:+10000000000" class="btn btn-primary"
+                    onclick="if(typeof gtag === 'function') { gtag('event', 'click_phone', {'event_category': 'Contact'}); }">
+                    📞 Call or Text Us
+                </a>
                 <span>📍 Service Area: New York, New Jersey, Pennsylvania</span>
             </div>
 
@@ -219,34 +236,36 @@
 
             const galleries = {
                 kitchen: [
-                    'Kitchen/IMG_1237.jpg',
-                    'Kitchen/IMG_1148.jpg',
-                    'Kitchen/IMG_2425.jpg',
-                    'Kitchen/IMG_2428.jpg',
-                    'Kitchen/IMG_4594.jpg',
-                    'Kitchen/IMG_4596.jpg',
-                    'Kitchen/IMG_1504.jpg',
-                    'Kitchen/kmain.jpg'
+                    'photo/kitchen/kmain.webp',
+                    'photo/kitchen/k1.webp',
+                    'photo/kitchen/k2.webp',
+                    'photo/kitchen/k3.webp',
+                    'photo/kitchen/k4.webp',
+                    'photo/kitchen/b1.webp',
+                    'photo/kitchen/b2.webp',
+                    'photo/kitchen/b3.webp',
+
+
                 ],
                 flooring: [
-                    'Flooring/fmain.jpg',
-                    'Flooring/IMG_4599.jpg',
-                    'Flooring/WALL.jpg',
-                    'Flooring/IMG_4602.jpg',
-                    'Flooring/IMG_4604.jpg'
+                    'photo/flooring/fmain.webp',
+                    'photo/flooring/f1.webp',
+                    'photo/flooring/f2.webp',
+                    'photo/flooring/f3.webp',
+                    'photo/flooring/f4.webp'
                 ],
                 decks: [
-                    'Decks/IMG_0326.jpg',
-                    'Decks/IMG_0331.jpg',
-                    'Decks/IMG_4428.jpg',
-                    'Decks/IMG_4429.jpg',
-                    'Decks/IMG_4616.jpg',
-                    'Decks/IMG_4618.jpg',
+                    'photo/decks/dmain.webp',
+                    'photo/decks/d1.webp',
+                    'photo/decks/d2.webp',
+                    'photo/decks/d3.webp',
+                    'photo/decks/d4.webp',
+                    'photo/decks/d5.webp',
                 ],
                 accent: [
-                    'Railing/IMG_4621.jpg',
-                    'Railing/IMG_4623.jpg',
-                    'Railing/IMG_4624.jpg',
+                    'photo/railing/rmain.webp',
+                    'photo/railing/r1.webp',
+                    'photo/railing/r2.webp',
                 ]
             };
 
