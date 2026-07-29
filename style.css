@@ -611,41 +611,39 @@ nav a:hover {
 /* Мобільні пристрої (Mobile & Tablet Portrait) */
 @media (max-width: 768px) {
   
-  /* Header: Логотип зліва, кнопки праворуч у 2 рядки */
   .site-header {
-    display: flex;
-    justify-content: space-between;
+    padding: 10px 16px;
     align-items: center;
-    padding: 8px 14px;
-    min-height: 70px;
   }
 
   .logo {
-    font-size: 18px !important;
-    max-width: 150px;
+    font-size: 16px !important;
     white-space: normal;
     line-height: 1.2;
+    flex: 1; /* Логотип займає весь доступний простір зліва */
+    padding-right: 10px;
   }
 
   nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 4px 10px;
-    max-width: 199px; /* Зменшили з 250px до 215px, щоб край nav збігався з "What We Do" */
+    display: grid;
+    /* Створюємо 2 колонки однакової ширини для першого рядка */
+    grid-template-columns: auto auto; 
+    gap: 6px 12px; /* 6px вертикальний відступ, 12px горизонтальний */
+    justify-content: end; /* Притискаємо блок навігації до правого краю */
   }
 
   nav a {
-    font-size: 14px !important;
-    text-decoration: none;
+    font-size: 13px !important;
     white-space: nowrap;
+    text-align: right;
   }
 
-  /* 3-тя кнопка (Contact) повертається на лівий край блоку nav (прямо під What We Do) */
+  /* Третя кнопка (Contact) займає першу колонку під першою кнопкою */
   nav a:nth-child(3) {
-    width: 100%;
-    text-align: left;
+    grid-column: 1; 
+    text-align: left; /* Чітко вирівнюється по лівому краю першої кнопки */
   }
+
   /* Hero */
   .hero-section {
     min-height: 85svh;
