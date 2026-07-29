@@ -13,24 +13,25 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-section {
-  scroll-margin-top: 80px;
-}
-
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
   background-color: #f8f9fa;
   color: #2b2b2b;
   line-height: 1.6;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-height: 100dvh;
+}
+
+section {
+  scroll-margin-top: 70px;
 }
 
 .container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 25px;
+  padding: 0 20px;
 }
 
 
@@ -45,29 +46,36 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 30px;
+  padding: 14px 24px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 800;
   color: #1a1a1a;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .logo span {
   color: #ff6b00;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 nav a {
-  margin-left: 25px;
   text-decoration: none;
   color: #4a4a4a;
   font-weight: 600;
   font-size: 14px;
-  transition: color 0.2s;
+  transition: color 0.2s ease;
+  white-space: nowrap;
 }
 
 nav a:hover {
@@ -76,20 +84,19 @@ nav a:hover {
 
 
 /* ==========================================
-   3. HERO SECTION (ЧИСТИЙ ТА ВІДКРИТИЙ ДИЗАЙН)
+   3. HERO SECTION
    ========================================== */
 .hero-section {
   position: relative;
-  min-height: 80svh; /* svh фіксує розмір і НЕ скаче при хованні панелі браузера */
+  min-height: 85svh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 80px 20px;
+  padding: 60px 20px;
   overflow: hidden;
   color: #ffffff;
 }
-
 
 .hero-slides {
   position: absolute;
@@ -104,7 +111,6 @@ nav a:hover {
   background-position: center;
 }
 
-/* Радіальне затемнення: темніше в центрі під текстом, щоб він легко читався, але фоновий малюнок видно */
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -119,7 +125,6 @@ nav a:hover {
   margin: 0 auto;
 }
 
-/* Верхній бейдж */
 .badge {
   display: inline-block;
   background: rgba(255, 107, 0, 0.2);
@@ -131,12 +136,11 @@ nav a:hover {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
-/* Головний заголовок */
 .hero-section h1 {
-  font-size: 46px;
+  font-size: 44px;
   font-weight: 800;
   line-height: 1.15;
   margin-bottom: 12px;
@@ -145,14 +149,13 @@ nav a:hover {
   letter-spacing: -0.5px;
 }
 
-/* Акуратний підпис компанії */
 .company-byline {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   color: #d1d5db;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
 }
 
@@ -161,23 +164,21 @@ nav a:hover {
   font-weight: 800;
 }
 
-/* Опис */
 .hero-desc {
   font-size: 17px;
   color: #e5e7eb;
   max-width: 700px;
-  margin: 0 auto 35px auto;
+  margin: 0 auto 30px auto;
   line-height: 1.6;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
-  font-weight: 400;
 }
 
-/* Кнопка */
 .hero-actions {
   display: flex;
   justify-content: center;
 }
 
+/* Кнопки */
 .btn {
   display: inline-block;
   border-radius: 8px;
@@ -199,7 +200,7 @@ nav a:hover {
 }
 
 .btn-call {
-  padding: 14px 40px;
+  padding: 14px 36px;
 }
 
 .btn-title {
@@ -217,34 +218,13 @@ nav a:hover {
   display: block;
 }
 
-/* Адаптив для телефонів */
-@media (max-width: 768px) {
-  .hero-section h1 {
-    font-size: 30px;
-  }
 
-  .company-byline {
-    font-size: 13px;
-    letter-spacing: 1px;
-  }
-
-  .hero-desc {
-    font-size: 15px;
-  }
-}
 /* ==========================================
-   4. SERVICES SECTION (2 COLUMNS GRID 2x2)
+   4. SERVICES SECTION
    ========================================== */
 .services-section {
   padding: 80px 0;
   background-color: #ffffff;
-}
-
-.section-desc {
-  text-align: center;
-  color: #666;
-  max-width: 600px;
-  margin: 10px auto 40px auto;
 }
 
 .services-section h2 {
@@ -252,6 +232,13 @@ nav a:hover {
   text-align: center;
   color: #1a1a1a;
   font-weight: 800;
+}
+
+.section-desc {
+  text-align: center;
+  color: #666;
+  max-width: 600px;
+  margin: 10px auto 40px auto;
 }
 
 .services-grid-main {
@@ -294,7 +281,6 @@ nav a:hover {
 .card-thumb img {
   display: block;
   width: 100%;
-  max-width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
@@ -334,7 +320,7 @@ nav a:hover {
 
 
 /* ==========================================
-   5. ALBUM MODAL & LIGHTBOX STYLES (ВИПРАВЛЕНО ДЛЯ ДЕСКТОПУ)
+   5. ALBUM MODAL & LIGHTBOX
    ========================================== */
 #album-modal {
   display: none;
@@ -353,9 +339,9 @@ nav a:hover {
   background: #1e1e1e;
   color: #ffffff;
   border-radius: 16px;
-  max-width: 1100px; /* Збільшено ширину модального вікна */
+  max-width: 1100px;
   width: 100%;
-  max-height: 90vh;  /* Збільшено висоту модального вікна */
+  max-height: 85svh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -378,13 +364,13 @@ nav a:hover {
 
 .modal-header h3 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #ffffff;
 }
 
 .close-modal {
-  font-size: 32px;
+  font-size: 30px;
   line-height: 1;
   cursor: pointer;
   color: #aaaaaa;
@@ -398,7 +384,7 @@ nav a:hover {
 
 .modal-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 колонки для десктопу замість 2 */
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   padding: 20px;
   overflow-y: auto;
@@ -410,7 +396,7 @@ nav a:hover {
   position: relative;
   display: block;
   width: 100%;
-  height: 220px; /* Збільшено висоту з 140px до 220px */
+  height: 200px;
   border-radius: 10px;
   overflow: hidden;
   background: #2a2a2a;
@@ -419,7 +405,6 @@ nav a:hover {
 .modal-gallery-grid img {
   display: block;
   width: 100%;
-  max-width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
@@ -432,11 +417,11 @@ nav a:hover {
 
 
 /* ==========================================
-   6. WHY CHOOSE US (LIGHT & MODERN)
+   6. WHY CHOOSE US
    ========================================== */
 .why-section {
   padding: 80px 0;
-  background-color: #f8f9fa; /* М'який світлий фон для контрасту з білими картками */
+  background-color: #f8f9fa;
   color: #1a1a1a;
 }
 
@@ -479,7 +464,6 @@ nav a:hover {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
 }
 
-/* Помаранчева лінія-акцент зверху картки при наведенні */
 .why-card::before {
   content: '';
   position: absolute;
@@ -510,7 +494,6 @@ nav a:hover {
   margin-bottom: 20px;
 }
 
-/* Квадратна підкладка під іконку */
 .why-icon-box {
   width: 48px;
   height: 48px;
@@ -546,36 +529,21 @@ nav a:hover {
   margin: 0;
 }
 
-/* Адаптив під мобільні та планшети */
-@media (max-width: 1024px) {
-  .why-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-@media (max-width: 600px) {
-  .why-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .why-section {
-    padding: 50px 0;
-  }
-}
 /* ==========================================
    7. FOOTER & CONTACTS
    ========================================== */
 .site-footer {
   background-color: #121212;
   color: #ffffff;
-  padding: 40px 0 20px 0;
+  padding: 50px 0 25px 0;
   margin-top: auto;
   text-align: center;
 }
 
 .site-footer h2 {
   color: #ffffff;
-  font-size: 24px;
+  font-size: 26px;
   margin-bottom: 10px;
   font-weight: 700;
 }
@@ -583,16 +551,17 @@ nav a:hover {
 .site-footer p {
   color: #aaaaaa;
   max-width: 600px;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 25px auto;
   font-size: 14px;
 }
 
 .footer-contacts {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 15px;
   flex-wrap: wrap;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .footer-contacts a,
@@ -601,56 +570,92 @@ nav a:hover {
   text-decoration: none;
   font-weight: 600;
   background-color: #222222;
-  padding: 10px 16px;
-  border-radius: 6px;
+  padding: 12px 20px;
+  border-radius: 8px;
   font-size: 14px;
-  transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  
+  /* Повністю прибираємо будь-які тіні та світіння */
+  box-shadow: none !important;
+  outline: none !important;
 }
 
-.footer-contacts a:hover {
-  background-color: #ff6b00;
+/* Прибираємо світіння та змінюємо фон при наведенні, фокусі й кліку */
+.footer-contacts a:hover,
+.footer-contacts a:focus,
+.footer-contacts a:active {
+  background-color: #333333;
   color: #ffffff;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 .footer-copy {
   border-top: 1px solid #222222;
-  padding-top: 16px;
+  padding-top: 20px;
   color: #666666;
   font-size: 12px;
 }
 
-
 /* ==========================================
-   8. RESPONSIVE STYLES (MEDIA QUERIES)
+   8. ALL MEDIA QUERIES (CONSOLIDATED)
    ========================================== */
+
+/* Планшети (Tablet Landscape & Smaller) */
+@media (max-width: 1024px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Мобільні пристрої (Mobile & Tablet Portrait) */
 @media (max-width: 768px) {
+  
+  /* Header */
   .site-header {
-    padding: 10px 16px;
+    padding: 12px 16px;
   }
 
   .logo {
-    font-size: 15px;
+    font-size: 14px;
+  }
+
+  nav {
+    gap: 12px;
   }
 
   nav a {
-    margin-left: 12px;
-    font-size: 13px;
+    font-size: 12px;
   }
 
+  /* Hero */
   .hero-section {
-    min-height: 85vh;
-    min-height: 85dvh;
-    padding: 60px 15px;
+    min-height: 80svh;
+    padding: 50px 16px;
   }
 
   .hero-section h1 {
-    font-size: 30px;
+    font-size: 28px;
   }
 
-  .hero-section p {
+  .company-byline {
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+  }
+
+  .hero-desc {
     font-size: 15px;
+    margin-bottom: 25px;
   }
 
+  .btn-call {
+    width: 100%;
+    max-width: 320px;
+    padding: 12px 20px;
+  }
+
+  /* Services */
   .services-section {
     padding: 50px 0;
   }
@@ -661,41 +666,66 @@ nav a:hover {
   }
 
   .card-thumb {
-    height: 150px;
+    height: 160px;
   }
 
+  /* Modal */
   #album-modal {
-    padding: 10px;
+    padding: 12px;
   }
 
   .modal-content {
-    max-height: 92vh;
+    max-height: 88svh;
     border-radius: 12px;
   }
 
   .modal-header {
-    padding: 14px 16px;
+    padding: 12px 16px;
   }
 
   .modal-gallery-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    padding: 10px;
+    padding: 12px;
   }
 
   .modal-gallery-grid a {
     height: 130px;
   }
 
+  /* Why Choose Us */
+  .why-section {
+    padding: 50px 0;
+  }
+
+  .why-header h2 {
+    font-size: 28px;
+  }
+
+  /* Footer */
   .footer-contacts {
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    gap: 12px;
   }
 
   .footer-contacts a,
   .footer-contacts span {
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
+  }
+}
+
+/* Маленькі смартфони (Small Mobile <= 480px) */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 13px;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-section h1 {
+    font-size: 25px;
   }
 }
